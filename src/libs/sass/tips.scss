@@ -1,0 +1,48 @@
+.ui-tips {
+    position: absolute;
+    z-index: 999;
+    width: auto;
+    font-size: 12px;
+    color: #fff;
+    // left: 50%;
+    background-color: #333;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+    -webkit-filter: drop-shadow(0 2px 10px rgba(0, 0, 0, 0.15));
+    filter: drop-shadow(0 2px 10px rgba(0, 0, 0, 0.15));
+    padding: 3px 8px;
+    border-radius: 2px;
+    white-space: nowrap;
+    transition: all 0.25s ease-in-out;
+    top: calc(100% + 6px);
+    display: none;
+    pointer-events: none;
+    animation: tipsFadeIn 0.3s ease-in-out forwards;
+    &::after {
+        width: 0;
+        height: 0;
+        left: calc(50% - 2px);
+        position: absolute;
+        content: "";
+        top: -4px !important;
+        border-bottom: 4px solid #000;
+        border-left: 4px dashed transparent;
+        border-right: 4px dashed transparent;
+    }
+}
+
+@keyframes tipsFadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes tipsFadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}

@@ -1,0 +1,106 @@
+.test-viewer {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+#root {
+    overflow: hidden;
+}
+
+.test-clou {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.test-toolbar {
+    width: 160px;
+    min-width: 160px;
+    background-color: #f0f0f0;
+    height: 100%;
+    padding: 1rem 0;
+}
+
+@media screen and (max-width: 399px) {
+    .test-toolbar {
+        display: none;
+    }
+}
+
+:root {
+    --web-safe-area-bottom: 0px;
+    --web-safe-area-top: 0px;
+    --navbar-height: 44px;
+
+    @supports (left: env(safe-area-inset-left)) {
+        --web-safe-area-top: constant(safe-area-inset-top);
+        --web-safe-area-top: env(safe-area-inset-top);
+        --web-safe-area-bottom: constant(safe-area-inset-bottom);
+        --web-safe-area-bottom: env(safe-area-inset-bottom);
+    }
+}
+
+:root {
+    --erp-h-editor-bg: rgba(255, 255, 255, 0.1);
+    --erp-h-editor-active: #141414;
+    --erp-h-editor-active-color: #bfbfbf;
+    --erp-h-editor-hover: #3a3a3a;
+    --alt-left-close-bg: #9b9b9b;
+    --alt-left-close-hover: #fff;
+
+    --upload-text-em: #7287bf;
+
+    --line-drag-color: #d9d9d9;
+    --fill-box-color: rgba(255, 255, 255, 0.8);
+    --color-drag-box: #1b1b1f;
+    --color-drag-border: rgba(255, 255, 255, 0.3);
+    --color-drag-bg: rgba(0, 0, 0, 0.8);
+    --main-text-color: #fff;
+    --border-color: rgba(255, 255, 255, 0.05);
+    --color-gray: #999;
+    --color-atl-left: #171717;
+    --color-filter: #141414;
+    --fill-active: #2e2f37;
+    /* --fill-hover: 22, 23, 32;
+    --fill-active: #4A4C5E; */
+    --fill-hover: 46, 47, 55;
+    --color-chat-box-bg: #0a0a0a;
+    --color-chat-box-fbg: #0a0a0a;
+    --color-chat-box-fborder: #0a0a0a;
+    --color-body: #212121;
+    --mind-menu-bg: #0a0a0a;
+    --el-menu-hover-bg-color: #151515;
+    --color-blue: #fff;
+    --color-white: #cdcdcd;
+    --color-border: rgba(255, 255, 255, 0.25);
+    --el-mask-color: #212121;
+    --color-gray-active: #eee;
+    --text-caption: #fff;
+    --color-icon: #fff;
+    --btn-gray: #222;
+    --el-color-primary: white;
+    --el-color-white: #999;
+    --gp-edit-bg: #fff;
+    --gp-edit-color: #333;
+    --gp-btn-bg: transparent;
+    --color-bg: #0a0a0a;
+    --left-btn-bg: #0f1017;
+    --left-btn-hover: 22, 23, 32;
+    --color-text: #ebebeb;
+    --tree-drag-ready: #fff;
+
+    .gp-tip .mind-title {
+        color: #fff;
+    }
+
+    .document-right {
+        background-color: #171717;
+
+        .dark-theme.fr-box.fr-basic .fr-wrapper {
+            background-color: transparent;
+        }
+    }
+}

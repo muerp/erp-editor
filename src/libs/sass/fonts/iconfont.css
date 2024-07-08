@@ -1,0 +1,22 @@
+@font-face {
+  font-family: "wrodviewer"; /* Project id 4234317 */
+  src: url('iconfont.woff2?t=1701938040077') format('woff2'),
+       url('iconfont.woff?t=1701938040077') format('woff'),
+       url('iconfont.ttf?t=1701938040077') format('truetype');
+}
+[class^="wd-"],
+[class*=" wd-"] {
+  font-family: "wrodviewer", serif !important ;
+  font-style: normal;
+  vertical-align: middle;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1;
+}
+.wd-gou:before {
+  content: "\e610";
+}
+
+.wd-arrow-left:before {
+  content: "\e605";
+}

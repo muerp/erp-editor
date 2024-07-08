@@ -1,0 +1,180 @@
+.color-black {
+    color: #fff;
+}
+.color-gray {
+    color: #999;
+}
+
+.docx-dark {
+    --table-item-bg: #353535;
+    --table-item-hover-bg: #353535;
+    color: #ebebeb;
+    background-color: #141414;
+    --math-border-color: #999;
+    .dox-toolbar {
+        // border-radius: 10px 10px 0px 0px;
+        background-color: #353535;
+        border-bottom: 1px solid transparent;
+        .t-1 svg {
+            color: #444;
+        }
+    }
+    .btn {
+        color: #ebebeb;
+        &:hover {
+            background-color: #424242;
+        }
+    }
+    .ui-tips {
+        background-color: rgb(17, 17, 17);
+        box-shadow: 0 3px 6px rgba(255, 255, 255, 0.1);
+    }
+    .title-input input {
+        color: #ebebeb;
+    }
+    .drop-view {
+        background-color: #353535;
+        box-shadow:
+            0 3px 1px -2px rgba(0, 0, 0, 0.2),
+            0 2px 2px 0 rgba(0, 0, 0, 0.14),
+            0 1px 5px 0 rgba(0, 0, 0, 0.12);
+        border-color: #424242;
+        .color-more,
+        .default-color {
+            color: #ebebeb;
+
+            &:hover {
+                background-color: #424242;
+            }
+            &.active {
+                background-color: #424242;
+            }
+        }
+        .drop-item {
+            color: #ebebeb;
+            &:hover {
+                background-color: transparent;
+            }
+            &.hovered {
+                background-color: #424242;
+            }
+            &.active {
+                background-color: #424242;
+            }
+        }
+    }
+    .docx-toolbar .btn.active {
+        background-color: #232323;
+        color: #999;
+    }
+
+    .toolbar-inline {
+        background-color: #353535;
+        box-shadow:
+            0 3px 5px -1px rgba(0, 0, 0, 0.2),
+            0 6px 10px 0 rgba(0, 0, 0, 0.14),
+            0 1px 18px 0 rgba(0, 0, 0, 0.12);
+        border: none;
+        .t-1 svg {
+            color: #444;
+        }
+    }
+    --table-padding-top: 14px;
+    --table-border-color: #d6d6d6;
+    --table-split-bg: #4096ff;
+    --table-item-bg: #353535;
+    --table-item-hover-bg: #717171;
+    --table-item-wh: 8px;
+    --math-light-gray: #575757;
+    .math-dialog {
+        .modal-content {
+            background-color: #353535;
+        }
+    }
+    .latex-editor .input-area textarea {
+        background-color: #353535;
+        color: #ebebeb;
+    }
+    .latex-editor .right {
+        background-color: #353535;
+    }
+    .symbol-content svg {
+        stroke: #ebebeb;
+    }
+    .latex-editor .preview-content svg,
+    .latex-editor .formula-item .formula-item-content svg {
+        stroke: #fff;
+    }
+    .btn-primary {
+        background-color: #ebebeb;
+        color: #333;
+        border-color: #ebebeb;
+        &:hover {
+            background-color: #aaa;
+            border-color: #aaa;
+        }
+    }
+    .math-block {
+        svg {
+            stroke: #fff;
+        }
+    }
+    .hr-bover-bg {
+        &:hover {
+            background-color: #353535;
+        }
+    }
+    .hr-focused-bg {
+        background-color: #353535;
+    }
+    .popover-modal > div {
+        background-color: #353535;
+        border-color: transparent;
+        box-shadow:
+            0 3px 1px -2px rgba(0, 0, 0, 0.2),
+            0 2px 2px 0 rgba(0, 0, 0, 0.14),
+            0 1px 5px 0 rgba(0, 0, 0, 0.12);
+    }
+    .popover-modal > div > div:nth-child(n + 2) {
+        background-color: #353535;
+        border-radius: 4px;
+        box-shadow:
+            0 3px 1px -2px rgba(0, 0, 0, 0.2),
+            0 2px 2px 0 rgba(0, 0, 0, 0.14),
+            0 1px 5px 0 rgba(0, 0, 0, 0.12);
+        div div div {
+            transition: all 0.2s;
+            &:hover {
+                background-color: #424242;
+            }
+        }
+    }
+    .popover-modal {
+        div div:nth-child(1) {
+            // background-color: transparent;
+        }
+        button {
+            &:hover {
+                background-color: #424242;
+            }
+        }
+        svg {
+            color: #fff;
+        }
+        [data-open="true"] {
+            background-color: #424242 !important;
+        }
+        color: #fff;
+    }
+    .hr-dashed-line,
+    .hr-solid-line,
+    .hr-dotted-line,
+    .hr-double-line,
+    .hr-one-line,
+    .hr-two-line,
+    .hr-three-line,
+    .hr-four-line {
+        background-color: #fff;
+        border-color: #fff;
+    }
+}

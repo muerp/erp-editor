@@ -1,0 +1,165 @@
+.avatar {
+    border-radius: 10rem;
+    overflow: hidden;
+    cursor: pointer;
+}
+.avatar-ml {
+    width: 32px;
+    height: 32px;
+    font-size: 16px;
+}
+
+.default-avatar {
+    color: #fff;
+    height: 100%;
+    width: 100%;
+}
+.main-navigation {
+    padding:  0 10px;
+}
+.navigation-inner {
+    display: flex;
+    align-items: center;
+}
+.nav-inner {
+    flex: 1;
+}
+
+.menu-bar {
+    display: flex;
+    font-size: 14px;
+    border-bottom: none;
+}
+.file-icon {
+    svg {
+        width: 42px;
+        height: 60px;
+    }
+}
+.file-name {
+    font-size: 18px;
+    padding: 0 5px;
+}
+.menu-item {
+    text-align: center;
+    height: var(--main-menu-height);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.menu-click {
+    padding: 4px 5px;
+    // &:hover {
+    //     color: #496dfe;
+    // }
+    &.active {
+        color: #496dfe;
+    }
+}
+
+
+.modal-view {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 164px;
+    background-color: #f9f9f9;
+    border-radius: 4px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.5);
+    border: 1px solid #eee;
+    z-index: 99;
+    padding: 0;
+    animation: opacityShowAni .2s forwards;
+    &.dir-right {
+        left: 100%;
+        top: -10px;
+    }
+}
+
+.drop-item {
+    position: relative;
+}
+
+.drop-item-inner {
+    padding: 5px 12px;
+    color: #444;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 13px;
+    transition: all .2s;
+
+    &.hovered {
+        background-color: rgba(188, 198, 248, 0.5);
+    }
+    &.selected {
+        background-color: rgba(212, 212, 212, 0.5);
+    }
+    .wd-arrow-left {
+        transform: rotate(180deg);
+        color: #999;
+        font-size: 13px;
+    }
+
+}
+.shortcut-key {
+    color: #999;
+}
+
+.drop-label {
+    pointer-events: none;
+    display: flex;
+    align-items: center;
+
+    &::before {
+        font-family: 'wrodviewer';
+        content: '';
+        width: 20px;
+    }
+}
+
+.drop-line {
+    border-bottom: 1px solid #ccc;
+}
+
+.drop-item-inner.active {
+    .drop-label {
+        &::before {
+            content: '\e610';
+            color: #999;
+        }
+    }
+}
+
+.nav-right {
+    .btn {
+        width: 42px;
+        height: 42px;
+        margin: 0 8px;
+    }
+    svg {
+        width: 1.3rem;
+        height: 1.3rem;
+    }
+    .btn-blue {
+        width: auto;
+        padding: 0 1.4rem;
+        svg {
+            width: 1.1rem;
+            height: 1.1rem;
+        }
+        span {
+            margin-left: 6px;
+            font-size: 14px;
+        }
+    }
+    .avatar {
+        margin: 0 8px;
+    }
+
+}
+

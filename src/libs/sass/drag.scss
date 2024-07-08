@@ -1,0 +1,133 @@
+.drag-view {
+    position: relative;
+    --line-background-color: #fff;
+
+    .drag-line {
+        display: flex;
+        position: absolute;
+        user-select: none;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        z-index: 9;
+
+        &::after {
+            content: '';
+            opacity: 0.8;
+            background-color: var(--color-border);
+        }
+    }
+
+    .drag-line:hover::after {
+        content: '';
+        background-color: var(--line-background-color);
+    }
+
+    .drag-line.show::after {
+        content: '';
+    }
+
+    .drag-right {
+        justify-content: center;
+        top: 0;
+        right: -5px;
+        bottom: 0;
+        width: 10px;
+        cursor: col-resize;
+    }
+
+    .drag-right::after {
+        width: 1px;
+        height: 100%;
+    }
+
+    .drag-left {
+        justify-content: center;
+        top: 0;
+        left: -5px;
+        bottom: 0;
+        width: 10px;
+        cursor: col-resize;
+    }
+
+    .drag-left::after {
+        width: 1px;
+        height: 100%;
+    }
+
+    .drag-bottom {
+        align-items: center;
+        bottom: -5px;
+        left: 0;
+        right: 0;
+        height: 10px;
+        cursor: row-resize;
+    }
+
+    .drag-bottom::after {
+        width: 100%;
+        height: 1px;
+    }
+
+    .drag-top {
+        align-items: center;
+        top: -5px;
+        left: 0;
+        right: 0;
+        height: 10px;
+        cursor: row-resize;
+    }
+
+    .drag-top::after {
+        width: 100%;
+        height: 1px;
+    }
+
+
+    .drag-popup {
+        position: absolute;
+        background-color: #4dcfc2;
+        top: 50%;
+        left: 50%;
+        padding: 20px;
+        overflow: hidden;
+    }
+
+    .drag-box {
+        position: absolute;
+        z-index: 10;
+        width: 16px;
+        height: 16px;
+    }
+
+    .drag-left-top {
+        left: -8px;
+        top: -8px;
+        cursor: nwse-resize;
+    }
+
+    .drag-left-bottom {
+        left: -8px;
+        bottom: -8px;
+        cursor: nesw-resize;
+    }
+
+    .drag-right-top {
+        right: -8px;
+        top: -8px;
+        cursor: nesw-resize;
+    }
+
+    .drag-right-bottom {
+        right: -8px;
+        bottom: -8px;
+        cursor: nwse-resize;
+    }
+
+    .drag-dragging {
+        * {
+            user-select: none !important;
+            -webkit-user-select: none !important;
+            pointer-events: none !important;
+        }
+    }
+}

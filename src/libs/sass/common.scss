@@ -1,0 +1,73 @@
+[class^="pcon-"],
+[class*=" pcon-"] {
+  font-family: "iconfont", serif !important ;
+  font-style: normal;
+  vertical-align: middle;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1;
+}
+.d-flex, .d-center, .d-between {
+  display: flex;
+  align-items: center;
+}
+.d-center {
+  justify-content: center;
+}
+.d-cloumn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.d-between  {
+  justify-content: space-between;
+}
+.flex-1 {
+  flex: 1;
+}
+.ml-1 {
+  margin-left: 6px ;
+}
+.p-1 {
+  padding: 6px;
+}
+.docx-math {
+  display: inline-block;
+  position: relative;
+  svg {
+    overflow: hidden;
+    display: inline-block;
+  }
+ 
+}
+.math-block {
+  display: inline-block;
+  cursor: pointer;
+  border: 1px solid transparent;
+  &.active {
+    border-color: #ababab;
+    border-radius: 4px;
+  }
+}
+
+.hidden {
+  display: none;
+} 
+.absolute {
+  position: absolute;
+}
+.text-hideen {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.no-pointer {
+  pointer-events: none;
+}
+.mr-2 {
+  margin-right: 12px;
+}
+.inline-block {
+  display: inline-block;
+}

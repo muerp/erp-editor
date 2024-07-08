@@ -1,0 +1,241 @@
+.erp-history {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    z-index: 999;
+}
+
+.article-history {
+    * {
+        box-sizing: border-box;
+    }
+
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-atl-left);
+    display: flex;
+
+    &.show {
+        animation: showHistory .25s forwards;
+    }
+
+    &.hide {
+        animation: hideHistory .25s forwards;
+    }
+}
+
+@keyframes showHistory {
+    0% {
+        transform: translateX(50%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes hideHistory {
+    0% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateX(50%);
+        opacity: 0;
+    }
+}
+
+.article-history-header {
+    height: 64px;
+    min-height: 64px;
+    display: flex;
+    padding: 0 32px;
+    align-items: center;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.history-back {
+    background-color: transparent;
+    border: none;
+    color: #eee;
+    font-size: 14px;
+
+    .svg-icon {
+        margin-right: 6px;
+        width: 18px;
+        height: 18px;
+    }
+
+    &:hover {
+        color: #fff;
+        background-color: transparent;
+        border: none;
+    }
+
+    &:active,
+    &:focus {
+        background-color: transparent;
+        color: #eee;
+        border: none;
+    }
+}
+
+.history-recover {
+    background-color: #333;
+    color: #eee;
+    font-size: 12px;
+    border-color: #333;
+
+    &:hover {
+        color: #fff;
+        background-color: #666;
+        border-color: #666;
+    }
+
+    &:active,
+    &:focus {
+        background-color: #333;
+        color: #eee;
+        border-color: #333;
+    }
+}
+
+.history-label {
+    font-size: 16px;
+    color: #eee;
+}
+
+.history-left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.history-right {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+
+    .drag-line-right {
+        top: 0;
+        bottom: 0;
+
+        &:before {
+            width: 1px;
+        }
+    }
+
+    .el-scrollbar {
+        flex: 1;
+    }
+}
+
+.history-editor-viewer {
+    padding: 0;
+}
+
+.article-history-list {
+    color: #fff;
+    padding: 0 0 20px;
+    margin: 0;
+    font-size: 14px;
+
+    .ah-content {
+        padding: 16px 20px 16px 0;
+        margin-left: 20px;
+        border-bottom: 1px solid var(--color-border);
+        flex: 1;
+        overflow: hidden;
+        // width: calc(100% - 26px);
+    }
+
+    li {
+        list-style: none;
+        display: flex;
+        align-items: center;
+        border-left: 3px solid transparent;
+        border-radius: 8px;
+        transition: all .25s;
+        cursor: pointer;
+
+        &:before {
+            content: '';
+            display: block;
+            width: 6px;
+            height: 6px;
+            background-color: #eee;
+            margin: 0 10px;
+            border-radius: 2rem;
+        }
+
+        &.active,
+        &:hover {
+            background-color: #201e3d;
+            border-left: 3px solid #3370ff;
+
+            .ah-content {
+                border-bottom: 1px solid var(--color-border);
+            }
+        }
+
+        &:nth-last-child(1) {
+            .ah-content {
+                border-bottom: none;
+            }
+        }
+    }
+
+    .history-title {
+        font-size: 12px;
+        width: 100%;
+        word-wrap: break-word;
+    }
+}
+
+.history-left-inner {
+    width: 100%;
+    height: 100%;
+}
+
+.history-time {
+    padding: 0 0 8px;
+}
+
+
+.scroll-bar {
+    overflow: auto;
+
+    &::-webkit-scrollbar {
+        display: block;
+        -webkit-appearance: none;
+    }
+
+    &::-webkit-scrollbar:vertical {
+        width: 8px;
+
+    }
+
+    &::-webkit-scrollbar:horizontal {
+        height: 8px;
+        background-color: transparent;
+    }
+
+    &::-webkit-scrollbar-track {
+        background-color: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        /* 滚动条的其他样式定制，注意，这个一定也要定制，否则就是一个透明的滚动条 */
+        border-radius: 8px;
+        /* 设置滚动条的圆角 */
+        border: 2px solid rgba(255, 255, 255, 0);
+        /* 设置滚动条的边框 */
+        background-color: rgba(255, 255, 255, 0.2);
+        /* 设置滚动条的颜色填充 */
+    }
+}

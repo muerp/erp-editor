@@ -1,0 +1,88 @@
+{
+  "name": "@erp/editor",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build:demo": "tsc && vite build",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview",
+    "build": "vite build --config vite-lib.config.ts && tsc --project tsconfig.lib.json",
+    "editor-image": "yarn patch-package @editablejs/plugin-image",
+    "editor": "yarn patch-package @editablejs/editor",
+    "editor-ui": "yarn patch-package @editablejs/ui",
+    "editor-toolbar": "yarn patch-package @editablejs/plugin-toolbar",
+    "editor-all": "yarn editor-image && yarn editor-ui && yarn editor",
+    "heading": "yarn patch-package @editablejs/plugin-heading",
+    "table": "yarn patch-package @editablejs/plugin-table"
+  },
+  "dependencies": {
+    "@babel/core": "^7.23.3",
+    "@babel/preset-react": "^7.23.3",
+    "@codemirror/lang-html": "^6.4.6",
+    "@codemirror/lang-javascript": "^6.2.1",
+    "@docsearch/css": "^3.5.2",
+    "@editablejs/editor": "^1.0.2",
+    "@editablejs/models": "^1.0.0",
+    "@editablejs/plugin-history": "^1.0.2",
+    "@editablejs/plugin-title": "^1.0.2",
+    "@editablejs/plugin-toolbar": "^1.0.2",
+    "@editablejs/plugin-yjs": "^1.0.2",
+    "@editablejs/plugins": "^1.0.6",
+    "@editablejs/yjs-websocket": "^1.0.0",
+    "@hocuspocus/provider": "^2.8.0",
+    "@rollup/plugin-commonjs": "^25.0.4",
+    "@slate-yjs/core": "^1.0.2",
+    "@slate-yjs/react": "^1.1.0",
+    "colord": "^2.9.3",
+    "hfmath": "^0.0.2",
+    "i18next": "^23.7.8",
+    "mammoth": "^1.6.0",
+    "next": "^14.0.2",
+    "patch-package": "^8.0.0",
+    "randomcolor": "^0.6.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-i18next": "^13.4.1",
+    "sass": "^1.66.1",
+    "sass-resources-loader": "^2.2.5",
+    "string-hash": "^1.1.3",
+    "styled-components": "^6.1.1",
+    "vite-plugin-babel-macros": "^1.0.6",
+    "yjs": "^13.6.8"
+  },
+  "babelMacros": {
+    "twin": {
+      "preset": "styled-components"
+    }
+  },
+  "devDependencies": {
+    "@types/katex": "^0.16.7",
+    "@types/lodash.debounce": "^4.0.9",
+    "@types/node": "^20.5.7",
+    "@types/randomcolor": "^0.5.9",
+    "@types/react": "^18.2.15",
+    "@types/react-dom": "^18.2.7",
+    "@types/string-hash": "^1.1.1",
+    "@types/styled-components": "^5.1.30",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "@vitejs/plugin-react": "^4.2.1",
+    "babel-plugin-macros": "^3.1.0",
+    "babel-plugin-styled-components": "^2.1.4",
+    "babel-plugin-twin": "^1.0.2",
+    "eslint": "^8.45.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.3",
+    "typescript": "^5.0.2",
+    "vite": "^4.4.5",
+    "vite-plugin-svg-icons": "^2.0.1"
+  },
+  "eslintConfig": {
+    "env": {
+      "browser": true,
+      "node": true
+    }
+  }
+}

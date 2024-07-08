@@ -1,0 +1,229 @@
+.docx-toolbar {
+    display: flex;
+    align-items: center;
+    padding: 8px 0;
+    gap: 0.1rem;
+    flex-wrap: wrap;
+
+    .btn.active {
+        background-color: #dbeafe;
+        color: #4096ff;
+    }
+
+    svg {
+        width: 14px;
+        height: 14px;
+    }
+
+    .toolbar-item {
+        width: 28px;
+        height: 28px;
+        padding: 0;
+        margin: 2px 0;
+    }
+
+    .t-1 {
+        svg {
+            border: 1px solid #f4e6b9;
+            width: 24px;
+            height: 24px;
+            border-radius: 2px;
+            background-color: #f4e6b9;
+            padding: 5px;
+        }
+    }
+
+    .t-2 {
+        svg {
+            border: 1px solid #ddd;
+            width: 24px;
+            height: 24px;
+            border-radius: 2px;
+            padding: 5px;
+            color: #f00;
+        }
+    }
+
+    .t-3 {
+        svg {
+            width: 16px;
+            height: 16px;
+        }
+    }
+
+    .t-4 {
+        svg {
+            width: 16px;
+            height: 16px;
+        }
+    }
+
+    .t-5 {
+        width: auto;
+        padding: 0 8px 0 10px;
+
+        .t-text {
+            display: inline-block;
+            // width: 50px;
+            margin-right: 8px;
+            font-size: 13px;
+        }
+    }
+
+    .t-6 {
+        width: auto;
+        padding: 0 10px;
+
+        .t-text {
+            width: 20px;
+            font-size: 13px;
+        }
+    }
+
+    .t-7 {
+        width: 36px;
+
+        svg {
+            width: 10px;
+            height: 10px;
+        }
+
+        .target-color {
+            width: 16px;
+            height: 2px;
+            background-color: red;
+            margin-top: 2px;
+        }
+    }
+
+    .t-8 {
+        svg {
+            width: 10px;
+            height: 10px;
+        }
+    }
+
+    .t-9 {
+        svg {
+            width: 18px;
+            height: 18px;
+        }
+    }
+
+    .t-10 {
+        svg {
+            width: 20px;
+            height: 20px;
+        }
+    }
+
+    .t-11 {
+        svg {
+            width: 15px;
+            height: 15px;
+        }
+    }
+
+    .t-12 {
+        svg {
+            width: 16px;
+            height: 16px;
+        }
+    }
+
+    .toolbar-angle-button {
+        width: 12px;
+        padding: 0;
+    }
+
+    .toolbar-angle {
+        width: 12px;
+        height: 12px;
+        padding: 0 2px;
+        color: #888;
+    }
+
+    .table-line {
+        height: 16px;
+        width: 1px;
+        background-color: #ccc;
+        margin: 0 2px;
+    }
+}
+
+.drop-view {
+    .toolbar-normal-text {
+        font-size: 14px;
+    }
+
+    .toolbar-h1 {
+        font-size: 2rem;
+        font-weight: bold;
+    }
+
+    .toolbar-h2 {
+        font-size: 1.5rem;
+        font-weight: 500;
+    }
+
+    .toolbar-h3 {
+        font-size: 1.17rem;
+        font-weight: 500;
+    }
+
+    .toolbar-h4 {
+        font-size: 14px;
+        font-weight: 500;
+    }
+}
+
+.font-list {
+    .drop-view {
+        padding-right: 10px;
+    }
+}
+
+.toolbar-popover {
+    position: absolute;
+    top: 0;
+}
+
+.toolbar-inline {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 4px;
+    z-index: 99;
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+}
+
+.dox-toolbar-mobile {
+    width: 100%;
+    padding-top: var(--web-safe-area-top);
+    height: calc(var(--web-safe-area-top) + var(--navbar-height));
+    background-color: #141414;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    z-index: 9;
+}
+
+.toolbar-mobile {
+    width: 100%;
+    padding: 0 10px;
+    height: 100%;
+    .svg-icon {
+        width: 24px !important;
+        height: 24px !important;
+        color: #fff !important;
+    }
+    .back-view {
+        margin-right: auto;
+    }
+}
+.dox-erp-mobile {
+    padding-top: calc(var(--web-safe-area-top) + var(--navbar-height));
+}

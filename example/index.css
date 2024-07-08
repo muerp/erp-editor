@@ -1,0 +1,34 @@
+html,
+body,
+#root {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.docx-title {
+  background-color: #fff;
+}
+
+.theme-dark {
+  background-color: #141414;
+
+  .docx-title {
+    background-color: #141414;
+  }
+}
+
+.theme-dark {
+  .test-toolbar {
+    background-color: #202020;
+
+    .btn {
+      color: #fff;
+      &:hover {
+        background-color: #525252;
+      }
+    }
+  }
+}
